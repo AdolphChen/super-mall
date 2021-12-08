@@ -3,12 +3,14 @@
     <nav-bar class="home-navbar">
       <div slot="nav-bar-center">购物街</div>
     </nav-bar>
+    <swiper></swiper>
   </div>
 </template>
 
 <script>
 import NavBar from "components/common/navbar/NavBar";
 import { getHomeSwiper } from "../../network/home";
+import Swiper from "views/home/childSwiper/swiper";
 export default {
   name: "",
   data() {
@@ -17,7 +19,7 @@ export default {
       recommend: [],
     };
   },
-  components: { NavBar },
+  components: { NavBar, Swiper },
   mounted() {},
   methods: {
     getSwiperData() {
